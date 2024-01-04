@@ -36,96 +36,26 @@ def makeStructure(linkForCatalog):
         os.startfile(f"{catDir}\\Banery\\Baner 2\\Org")
 
 def chooseRightFormat(kraje, catDir, baner_check, b_number, data):
-    
-    
-        #cNC.nameCorrection(catDir,baner_check, b_number)
-        #cNC.dach_chfr_checker_jpg(catDir,baner_check, b_number, "jpg")
-       
-        
+
         if baner_check[0].endswith(".mp4") or baner_check[1].endswith(".mp4"):
             cNC.dach_checker(catDir, b_number, ".mp4")
             cNC.chfr_checker(catDir, b_number, ".mp4")
             # Pobranie zaktualizowanej zawartości folderów aby filtr mógł je wszystkie przeskalować "baner_check"
-            baner_check = baner_check =list(os.listdir(f"{catDir}\\Banery\\Baner {b_number}\\Org"))
+            baner_check = list(os.listdir(f"{catDir}\\Banery\\Baner {b_number}\\Org"))
             mp4Filtr.mp4Conwerter(kraje, catDir, baner_check, b_number, data)
 
         elif baner_check[0].endswith(".jpg") or baner_check[1].endswith(".jpg"): 
             cNC.dach_checker(catDir, b_number, "jpg")
             cNC.chfr_checker(catDir, b_number, "jpg")
             # Pobranie zaktualizowanej zawartości folderów aby filtr mógł je wszystkie przeskalować "baner_check"
-            baner_check = baner_check =list(os.listdir(f"{catDir}\\Banery\\Baner {b_number}\\Org"))
+            baner_check = list(os.listdir(f"{catDir}\\Banery\\Baner {b_number}\\Org"))
             banFiltr.bannerFileResizer(kraje, catDir, baner_check,b_number,data, "jpg")
 
         elif baner_check[0].endswith(".png") or baner_check[1].endswith(".png"): 
             cNC.dach_checker(catDir, b_number, "png")
             cNC.chfr_checker(catDir, b_number, "png")
             # Pobranie zaktualizowanej zawartości folderów aby filtr mógł je wszystkie przeskalować "baner_check"
-            baner_check = baner_check =list(os.listdir(f"{catDir}\\Banery\\Baner {b_number}\\Org"))
-            pngFiltr.pngResizerq(kraje, catDir, baner_check, b_number)
-   # else: print("uzupełnij foldery banerów")   
-    
+            baner_check = list(os.listdir(f"{catDir}\\Banery\\Baner {b_number}\\Org"))
+            banFiltr.bannerFileResizer(kraje, catDir, baner_check, b_number, data, "png")
 
-
-
-#chooseRightFormat(kraje, catDir, baner2_check, 2)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-# def weryfikacja(linkForCatalog, kraje): 
-     
-#      catDir = linkForCatalog
-#      weryfikacjaBaneru  = input("Czy banery zostały dodane we właściwych folderach? Y/N ")
-#      while weryfikacjaBaneru:
-#         wweryfikacja = weryfikacjaBaneru.upper()
-#         if wweryfikacja == 'Y':
-#           baner1_check =  list(os.listdir(f"{catDir}\\Banery\\Baner 1\\Org"))
-#           baner2_check =  list(os.listdir(f"{catDir}\\Banery\\Baner 2\\Org"))
-#           if baner1_check[0].find('.mp4'):
-#               mp4FileChecker.mp4Conwerter(kraje, catDir, 1, baner1_check)
-#           break
-            
-#         else: 
-#             print('Dodaj pliki banerów do właściwych folderów')
-#             weryfikacja(catDir)
-         
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
 

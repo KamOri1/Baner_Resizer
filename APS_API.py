@@ -19,9 +19,10 @@ def psBannerResizer(catDir, baner_check, b_number):
 
 
 
-
-    # zamyka program photoshop
-    ps.Application().quit()
-    print('zakończono')
+def closePhotoshop(closePS):
+    if closePS.lower() == "close_ps":
+        # zamyka program photoshop
+        ps.Application().quit()
+        print('zakończono')
 
 
