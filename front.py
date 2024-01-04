@@ -1,5 +1,6 @@
 import tkinter as tk
 import core
+import APS_API
 import mp4FileChecker
 
 def bigWindow():
@@ -13,7 +14,7 @@ def bigWindow():
     
 
     def licz():
-        kraje = ['chde','chfr','at', 'de', 'fr', 'uk', 'pl', 'nl', 'es', 'it', 'pt', 'fi', 'hu', 'dk', 'cz', 'no', 'sk', 'se']
+        kraje = ['chde','chfr','at', 'de', 'fr', 'uk', 'pl', 'nl', 'es', 'it', 'pt', 'fi', 'hu', 'dk', 'cz', 'no', 'sk','se']
         catalogLocalization_ = llinkForCatalog_.get()
         data_ = dateforCatalog_.get()
         
@@ -28,6 +29,7 @@ def bigWindow():
             core.cNC.nameCorrection(catalogLocalization_,core.banerList(2, catalogLocalization_), 2)
             core.chooseRightFormat(kraje, catalogLocalization_, core.banerList(2, catalogLocalization_), 2, data_)
 
+            APS_API.closePhotoshop('close_ps')
             # core.cNC.dach_checker_jpg(catalogLocalization_, 2, "jpg")
             # core.cNC.chfr_checker_jpg(catalogLocalization_, 2, "jpg")
             
