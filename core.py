@@ -1,7 +1,7 @@
 import os
 import cv2
 from PIL import Image
-import serverConnection
+#import serverConnection
 import mp4FileChecker as mp4Filtr
 import jpgFiltrChecker as jpgFiltr
 import pngFiltrChecker as pngFiltr

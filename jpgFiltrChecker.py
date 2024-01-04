@@ -2,7 +2,7 @@ import os
 import cv2
 from PIL import Image
 from PIL import ImageFilter
-import serverConnection
+#import serverConnection
 
 
 def jpgResizer(kraje, catDir, baner_check, b_number, data):
