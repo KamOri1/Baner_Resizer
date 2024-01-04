@@ -3,8 +3,9 @@ import cv2
 from PIL import Image
 #import serverConnection
 import mp4FileChecker as mp4Filtr
-import jpgFiltrChecker as jpgFiltr
+#import jpgFiltrChecker as jpgFiltr
 import pngFiltrChecker as pngFiltr
+import bannerFileChecker as banFiltr
 import countryNameCorrection as cNC
 #cataDir = 'C:\\Users\\Kaspi\\Desktop\\Nowy folder'
 # kraje = ['chde','at', 'de', 'fr', 'uk', 'pl', 'nl', 'es', 'it', 'pt', 'fi', 'hu', 'dk', 'cz', 'no', 'sk', 'se','chfr']
@@ -53,7 +54,7 @@ def chooseRightFormat(kraje, catDir, baner_check, b_number, data):
             cNC.chfr_checker(catDir, b_number, "jpg")
             # Pobranie zaktualizowanej zawartości folderów aby filtr mógł je wszystkie przeskalować "baner_check"
             baner_check = baner_check =list(os.listdir(f"{catDir}\\Banery\\Baner {b_number}\\Org"))
-            jpgFiltr.jpgResizer(kraje, catDir, baner_check,b_number,data)
+            banFiltr.bannerFileResizer(kraje, catDir, baner_check,b_number,data, "jpg")
 
         elif baner_check[0].endswith(".png") or baner_check[1].endswith(".png"): 
             cNC.dach_checker(catDir, b_number, "png")
