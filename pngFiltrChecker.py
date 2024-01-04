@@ -1,7 +1,7 @@
 import os
 import cv2
 from PIL import Image
-import serverConnection
+#import serverConnection
 #cataDir = 'C:\\Users\\Kaspi\\Desktop\\Nowy folder'               
 kraje = ['chde','at', 'de', 'fr', 'uk', 'pl', 'nl', 'es', 'it', 'pt', 'fi', 'hu', 'dk', 'cz', 'no', 'sk', 'se','chfr']
 #weryfikacja  = input("Czy banery zostały dodane we właściwych folderach? ")
