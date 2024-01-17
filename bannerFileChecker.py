@@ -36,8 +36,6 @@ def bannerFileResizer(kraje, catDir, baner_check, b_number, data, format):
 
     print(f'***** Paczka banerów nr {b_number} została przygotowana *****')
 
-
-    APS_API.psBannerResizer(catDir, baner_check, b_number)
-
-
+    APS_API.psBannerResizer(catDir, baner_check, b_number, data)
+    APS_API.psBannerResizer(catDir, baner_check, b_number, data)
 
