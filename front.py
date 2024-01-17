@@ -19,7 +19,7 @@ def bigWindow():
         data_ = dateforCatalog_.get()
         
         core.makeStructure(catalogLocalization_)
-        weryfikacja  = input("Czy banery zostały dodane we właściwych folderach? Y/N ")
+        weryfikacja = input("Czy banery zostały dodane we właściwych folderach? Y/N ")
         if weryfikacja.upper() == "Y":
             core.cNC.nameCorrection(catalogLocalization_,core.banerList(1, catalogLocalization_), 1)
             core.chooseRightFormat(kraje, catalogLocalization_, core.banerList(1, catalogLocalization_), 1, data_)

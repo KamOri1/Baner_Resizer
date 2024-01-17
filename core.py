@@ -44,6 +44,7 @@ def chooseRightFormat(kraje, catDir, baner_check, b_number, data):
             baner_check = list(os.listdir(f"{catDir}\\Banery\\Baner {b_number}\\Org"))
             mp4Filtr.mp4Conwerter(kraje, catDir, baner_check, b_number, data)
 
+
         elif baner_check[0].endswith(".jpg") or baner_check[1].endswith(".jpg"): 
             cNC.dach_checker(catDir, b_number, "jpg")
             cNC.chfr_checker(catDir, b_number, "jpg")

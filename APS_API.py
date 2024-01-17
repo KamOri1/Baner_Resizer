@@ -1,6 +1,6 @@
 import photoshop.api as ps
 
-def psBannerResizer(catDir, baner_check, b_number):
+def psBannerResizer(catDir, baner_check, b_number, data):
     app = ps.Application()
 
     for banner_name in baner_check:
@@ -11,7 +11,7 @@ def psBannerResizer(catDir, baner_check, b_number):
         print('załadowano kraj')
         # Resize and save the image
         banner_file.resizeImage(width=610, height=242, resolution=72, automatic=8)
-        jpg = f"{catDir}\\Banery\\Baner {b_number}\\New\\{banner_name}"
+        jpg = f"{catDir}\\Banery\\Baner {b_number}\\New\\{data}_b_{b_number}_{banner_name.lower()}"
         options = ps.JPEGSaveOptions(quality=5)
         banner_file.saveAs(jpg, options, asCopy=True)
         banner_file.close()

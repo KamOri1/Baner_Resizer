@@ -6,13 +6,13 @@ import shutil
 def nameCorrection(catDir,baner_check, b_number):
     for plik in baner_check:
         if "desktop" in plik:
-            new = plik.replace("desktop", " ")
+            new = plik.replace(" desktop", "")
             os.rename(f"{catDir}\\Banery\\Baner {b_number}\\Org\\{plik}", f"{catDir}\\Banery\\Baner {b_number}\\Org\\{new}")
         elif "Desktop" in plik:
-            new = plik.replace("Desktop", " ")
+            new = plik.replace(" Desktop", "")
             os.rename(f"{catDir}\\Banery\\Baner {b_number}\\Org\\{plik}", f"{catDir}\\Banery\\Baner {b_number}\\Org\\{new}")
         elif "DESKTOP" in plik:
-            new = plik.replace("DESKTOP", " ")
+            new = plik.replace(" DESKTOP", "")
             os.rename(f"{catDir}\\Banery\\Baner {b_number}\\Org\\{plik}", f"{catDir}\\Banery\\Baner {b_number}\\Org\\{new}")
     print(f"***** Sprawdzanie nazw banerów nr {b_number} zakończone *****")
 
